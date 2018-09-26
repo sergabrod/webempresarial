@@ -40,22 +40,28 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav mx-auto">
-            <li class="nav-item px-lg-4 {{ active_home }}" >
+            {% url 'home' as home_url %}
+            <li class="nav-item px-lg-4 {% if request.path == home_url %}active{% endif %}" >
               <a class="nav-link text-uppercase text-expanded" href="{% url 'home' %}">Inicio</a>
             </li>
-            <li class="nav-item px-lg-4 {{ active_about }}">
+            {% url 'about' as about_url %}
+            <li class="nav-item px-lg-4 {% if request.path == about_url %}active{% endif %}">
               <a class="nav-link text-uppercase text-expanded" href="{% url 'about' %}">Historia</a>
             </li>
-            <li class="nav-item px-lg-4 {{ active_services }}">
+            {% url 'services' as services_url %}
+            <li class="nav-item px-lg-4 {% if request.path == services_url %}active{% endif %}">
               <a class="nav-link text-uppercase text-expanded" href="{% url 'services' %}">Servicios</a>
             </li>
-            <li class="nav-item px-lg-4 {{ active_store }}">
+            {% url 'store' as store_url %}
+            <li class="nav-item px-lg-4 {% if request.path == store_url %}active{% endif %}">
               <a class="nav-link text-uppercase text-expanded" href="{% url 'store' %}">Visítanos</a>
             </li>
-            <li class="nav-item px-lg-4 {{ active_contact }}">
+            {% url 'contact' as contact_url %}
+            <li class="nav-item px-lg-4 {% if request.path == contact_url %}active{% endif %}">
               <a class="nav-link text-uppercase text-expanded" href="{% url 'contact' %}">Contacto</a>
             </li>
-            <li class="nav-item px-lg-4 {{ active_blog }}">
+            {% url 'blog' as blog_url %}
+            <li class="nav-item px-lg-4 {% if request.path == blog_url %}active{% endif %}">
               <a class="nav-link text-uppercase text-expanded" href="{% url 'blog' %}">Blog</a>
             </li>
           </ul>

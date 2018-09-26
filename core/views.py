@@ -3,27 +3,27 @@ from django.shortcuts import render, HttpResponse
 
 # Create your views here.
 def home(request):
-   return render(request, "core/index.html", {'active_home': 'active'})
+   return render(request, "core/index.html")
 
 
 def about(request):
-   return render(request, "core/about.html", {'active_about': 'active'})
+   return render(request, "core/about.html")
 
 
 def services(request):
-   return render(request, "core/services.html", {'active_services': 'active'})
+   return render(request, "core/services.html")
 
 
 def store(request):
-   return render(request, "core/store.html", {'active_store': 'active'})
+   return render(request, "core/store.html")
 
 
 def contact(request):
-   return render(request, "core/contact.html", {'active_contact': 'active'})
+   return render(request, "core/contact.html")
 
 
 def blog(request):
-   return render(request, "core/blog.html", {'active_blog': 'active'})
+   return render(request, "core/blog.html")
 
 
 def sample(request):
