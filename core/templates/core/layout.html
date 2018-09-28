@@ -61,7 +61,7 @@
               <a class="nav-link text-uppercase text-expanded" href="{% url 'contact' %}">Contacto</a>
             </li>
             {% url 'blog' as blog_url %}
-            <li class="nav-item px-lg-4 {% if request.path == blog_url %}active{% endif %}">
+            <li class="nav-item px-lg-4 {% if request.path|slice:":6" == blog_url %}active{% endif %}">
               <a class="nav-link text-uppercase text-expanded" href="{% url 'blog' %}">Blog</a>
             </li>
           </ul>
